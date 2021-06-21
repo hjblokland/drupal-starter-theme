@@ -1,0 +1,9 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "at-rule-no-unknown": null,
+    "function-comma-space-after": "always",
+    "max-empty-lines": 2,
+    "value-list-comma-space-after": "always"
+  }
+}

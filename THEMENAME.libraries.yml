@@ -1,0 +1,18 @@
+# These lines define your THEMENAME/global-styling (CSS) library.
+global-styling:
+  css:
+    theme:
+      dist/stylesheets/main.css: {}
+  js:
+    dist/javascripts/main.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+    - core/normalize
+
+# These lines define your THEMENAME/fonts library.
+fonts:
+  css:
+    theme:
+      '//fonts.googleapis.com/css?family=Work+Sans:300,400,500,700&display=swap': { type: external, minified: true }

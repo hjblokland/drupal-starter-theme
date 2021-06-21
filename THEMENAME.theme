@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * @file
+ * Theme file.
+ *
+ * All [pre]process and hook functions live
+ * inside the `./includes` directory (rather than directly in this file).
+ *
+ * [THEMENAME]_page_attachments_alter() = ./includes/alter.page-attachments.inc
+ * [THEMENAME]_theme_suggestions_alter() = ./includes/alter.theme-suggestions.inc
+ * [THEMENAME]_[pre]process_html() = ./includes/[pre]process.html.inc
+ * [THEMENAME]_[pre]process_comment_wrapper() = ./includes/[pre]process.comment-wrapper.inc
+ * etc.
+ */
+
+// Define constant variable for the `./includes` directory.
+define('INCLUDES_FOLDER', 'includes');
+
+/**
+ * Includes a theme file.
+ *
+ * @param string $theme
+ *   Name of the theme to use for base path.
+ * @param string $path
+ *   Path relative to $theme.
+ */
+function THEMENAME_theme_include($theme, $path) {
+  static $themes = [];
+  if (!isset($themes[$theme])) {
+    $themes[$theme] = drupal_get_path('theme', $theme);
+  }
+  if ($themes[$theme] && ($file = DRUPAL_ROOT . '/' . $themes[$theme] . '/' . $path) && file_exists($file) && pathinfo($file, PATHINFO_EXTENSION) === 'inc') {
+    include_once $file;
+  }
+}
+
+/**
+ * Declare various [pre]process/hook functions.
+ *
+ * All [pre]process/hook functions must live (via include) inside this
+ * file so they are properly detected when drupal_alter() is invoked.
+ */
+if (is_dir(__DIR__ . '/' . INCLUDES_FOLDER)) {
+  $files = scandir(__DIR__ . '/' . INCLUDES_FOLDER);
+  if (!empty($files)) {
+    foreach ($files as $file) {
+      THEMENAME_theme_include('THEMENAME', INCLUDES_FOLDER . '/' . $file);
+    }
+  }
+}

@@ -1,0 +1,34 @@
+name: 'THEMENAME: Drupal 9 theme'
+type: theme
+description: 'Drupal 9 theme'
+core_version_requirement: ^9
+version: 9.x-1.0
+project: THEMENAME
+base theme: 'classy'
+
+# Libraries.
+libraries:
+  - core/modernizr
+  - core/normalize
+  - THEMENAME/global-styling
+
+# Override libraries.
+libraries-override:
+  classy/base: false
+
+# CKeditor styles.
+ckeditor_stylesheets:
+  - dist/stylesheets/ckeditor.css
+
+# Regions.
+regions:
+  header: Header
+  highlighted: Highlighted
+  sidebar_first: Sidebar First
+  sidebar_first_facets: Sidebar First Facets
+  content_top: Content Top
+  content: Content
+  content_bottom: Content Bottom
+  sidebar_second: Sidebar Second
+  footer: Footer
+  footer_bottom: Footer Bottom
