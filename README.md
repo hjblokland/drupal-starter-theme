@@ -1,5 +1,7 @@
 # Drupal 9 starter theme
 
+![Node.js CI](https://github.com/hjblokland/d9-starter-theme/actions/workflows/node.js.yml/badge.svg)
+
 Drupal 9 starter theme to kickstart your project.
 
 - [Webpack](https://webpack.js.org/) for code compiling.
