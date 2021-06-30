@@ -7,6 +7,7 @@
   "license": "MIT",
   "scripts": {
     "lint:js": "eslint .",
+    "lint:css": "stylelint ./**/*.scss",
     "start": "npm run clean && webpack --watch --mode development --config ./config/webpack.dev.config.js",
     "build": "npm run clean && webpack --mode production --config ./config/webpack.prod.config.js",
     "clean": "rimraf ./dist"

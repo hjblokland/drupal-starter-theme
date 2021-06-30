@@ -2,9 +2,9 @@
 
 Drupal 9 starter theme to kickstart your project.
 
-* [Webpack](https://webpack.js.org/) for code compiling.
-* [Browsersync](https://browsersync.io/) for synchronised browser testing.
-* SVG icon system
+- [Webpack](https://webpack.js.org/) for code compiling.
+- [Browsersync](https://browsersync.io/) for synchronised browser testing.
+- SVG icon system
 
 ## Installation instructions
 
@@ -16,7 +16,7 @@ Download and extract the source files into your project `themes/custom/THEMENAME
 
 ### Give the theme a name
 
-Where you see in these instructions `THEMENAME` you should substitute the name of your theme (e.g. `my_theme`), 
+Where you see in these instructions `THEMENAME` you should substitute the name of your theme (e.g. `my_theme`),
 using all lower case and with no spaces. Use underscores to separate words.
 
 ### Install node modules
@@ -36,6 +36,16 @@ The entrypoint for these bundled files is `./src/index.js`.
 
     npm run build
 
+### Linting
+
+Lint js using eslint.
+
+    npm run lint:js
+
+Lint scss using stylelint.
+
+    npm run lint:css
+
 ### Browsersync
 
 Copy the `./config/config.js.example` file to `./config/config.js` and set
@@ -51,5 +61,3 @@ src/images/icons folder. You can use the following twig helper to render icons
 from the sprite as an inline SVG.
 
     {{ icon('image_id', 'image_desc') }}
-
-

@@ -19,7 +19,7 @@
       Drupal.themeBreakpoint.value = window.getComputedStyle(document.querySelector('body'), ':before')
         .getPropertyValue('content')
         // Remove garbage.
-        .replace(/\"/g, '');
+        .replace(/"/g, '');
     },
   };
 
@@ -29,5 +29,4 @@
   $(window).resize(() => {
     Drupal.themeBreakpoint.refreshValue();
   }).resize();
-
 })(jQuery, Drupal);
