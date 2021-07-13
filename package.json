@@ -40,7 +40,7 @@
     "rimraf": "3.0.2",
     "sass-loader": "12.1.0",
     "sass-toolkit": "^2.10.2",
-    "style-loader": "3.0.0",
+    "style-loader": "3.1.0",
     "stylelint": "13.13.1",
     "stylelint-config-standard": "22.0.0",
     "stylelint-webpack-plugin": "2.2.2",
