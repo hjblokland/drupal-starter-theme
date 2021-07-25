@@ -34,39 +34,20 @@ module.exports = {
         }
       },
       {
-        test: /\.svg$/,
-        exclude: /fonts/,
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]',
-            outputPath: 'images/',
-            emitFile: false,
-          }
+        test: /\.(png|jpg|gif|svg)$/,
+        include: /images/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[hash][ext][query]'
         }
       },
       {
-        test: /\.(png|jpg|gif)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'images/'
-            }
-          }
-        ]
-      },
-      {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-        exclude: /images/,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]',
-            outputPath: 'fonts/'
-          }
-        }]
+        include: /fonts/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[hash][ext][query]'
+        }
       },
       {
         test: /\.(sa|sc|c)ss$/,
@@ -117,7 +98,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'stylesheets/[name].css',
     }),
-    new SVGSpritemapPlugin('./src/images/icons/*.svg', {
+    new SVGSpritemapPlugin('./src/icons/*.svg', {
       sprite: {
         generate: {
           title: false,
@@ -131,11 +112,8 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: './src/images',
-          to: 'images',
-          globOptions: {
-            ignore: ['**/icons/**'],
-          },
+          from: './src/static',
+          to: './static',
         },
       ]
     }),

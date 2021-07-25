@@ -56,10 +56,28 @@ browsersyncTarget to your local environment. Don't commit this file.
 Browsersync only works if the drupal/link_css module is enabled (enabled trough
 dev config) and if all [drupal caching is disabled](https://www.drupal.org/node/2598914).
 
-### SVG icon system
+## File structure
 
-Webpack automatically generates an icon sprite from the svg images placed in the
-src/images/icons folder. You can use the following twig helper to render icons
-from the sprite as an inline SVG.
+### javascripts
+
+Javascript is compiled with webpack 5.
+
+### stylesheets
+
+Sass (`.scss` and `.sass`) is compiled automatically.
+
+### fonts, images
+
+Files are emitting with `[hash][ext][query]` filename into the output directory.
+
+### icons
+
+Webpack automatically generates an icon sprite from the svg images in the `src/icons` 
+folder. Use the following twig helper to render icons from the sprite as an inline SVG.
 
     {{ icon('image_id', 'image_desc') }}
+
+### static
+
+Things like favicons, app icons or images used directly from within the template 
+should go in `src/static`, and will get copied over to `dist/static`. 
