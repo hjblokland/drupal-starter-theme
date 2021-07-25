@@ -1,8 +1,9 @@
-# Drupal 9 starter theme
+# Drupal starter theme
 
-![Node.js CI](https://github.com/hjblokland/d9-starter-theme/actions/workflows/node.js.yml/badge.svg)
+![Node.js CI](https://github.com/hjblokland/drupal-starter-theme/actions/workflows/node.js.yml/badge.svg)
+![Drupal compatibility](https://img.shields.io/badge/Drupal%20compatibility-8.x|9.x-405b77.svg)
 
-Drupal 9 starter theme to kickstart your project.
+Drupal starter theme to kickstart your project.
 
 - [Webpack](https://webpack.js.org/) for code compiling.
 - [Browsersync](https://browsersync.io/) for synchronised browser testing.
@@ -12,9 +13,9 @@ Drupal 9 starter theme to kickstart your project.
 
 Download and extract the source files into your project `themes/custom/THEMENAME`.
 
-    wget https://github.com/hjblokland/d9-starter-theme/archive/refs/heads/master.zip
+    wget https://github.com/hjblokland/oizo/archive/refs/heads/master.zip
     unzip master.zip
-    mv d9-starter-theme my_theme
+    mv oizo my_theme
 
 ### Give the theme a name
 

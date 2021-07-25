@@ -1,9 +1,9 @@
 {
   "name": "THEMENAME",
   "version": "1.0.0",
-  "description": "THEMENAME: Drupal 9 theme",
+  "description": "THEMENAME: Drupal theme",
   "author": "HJ Blokland <hjblokland@gmail.com>",
-  "repository": "git@github.com:hjblokland/d9-starter-theme.git",
+  "repository": "git@github.com:hjblokland/drupal-starter-theme.git",
   "license": "MIT",
   "scripts": {
     "lint:js": "eslint .",

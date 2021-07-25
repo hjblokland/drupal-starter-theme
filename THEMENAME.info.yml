@@ -1,8 +1,7 @@
-name: 'THEMENAME: Drupal 9 theme'
+name: 'THEMENAME: Drupal theme'
 type: theme
-description: 'Drupal 9 theme'
-core_version_requirement: ^9
-version: 9.x-1.0
+description: 'Drupal theme'
+version: VERSION
 project: THEMENAME
 base theme: 'classy'
 
@@ -24,11 +23,11 @@ ckeditor_stylesheets:
 regions:
   header: Header
   highlighted: Highlighted
-  sidebar_first: Sidebar First
-  sidebar_first_facets: Sidebar First Facets
-  content_top: Content Top
+  sidebar_first: 'Sidebar First'
+  content_top: 'Content Top'
   content: Content
-  content_bottom: Content Bottom
-  sidebar_second: Sidebar Second
+  content_bottom: 'Content Bottom'
+  sidebar_second: 'Sidebar Second'
   footer: Footer
-  footer_bottom: Footer Bottom
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
