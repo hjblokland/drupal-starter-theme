@@ -13,9 +13,9 @@ Drupal starter theme to kickstart your project.
 
 Download and extract the source files into your project `themes/custom/THEMENAME`.
 
-    wget https://github.com/hjblokland/oizo/archive/refs/heads/master.zip
+    wget https://github.com/hjblokland/drupal-starter-theme/archive/refs/heads/master.zip
     unzip master.zip
-    mv oizo my_theme
+    mv drupal-starter-theme my_theme
 
 ### Give the theme a name
 
