@@ -1,9 +1,10 @@
 name: 'THEMENAME: Drupal theme'
 type: theme
 description: 'Drupal theme'
-version: VERSION
 project: THEMENAME
 base theme: 'classy'
+version: VERSION
+core_version_requirement: ^8 || ^9
 
 # Libraries.
 libraries:
